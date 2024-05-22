@@ -1,5 +1,8 @@
 package exemplos;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class Exemplo {
     public static void main(String[] args) {
         int n1 = 10;
@@ -34,5 +37,18 @@ public class Exemplo {
         for (int i = 0; i < 5; i++) {
             System.out.println("Posição [" + (i + 1) + "]:" + numeros[i]);
         }
+        // Array dinâmico
+        List<Integer> n_dinamico = new ArrayList<Integer>();
+        n_dinamico.add(25);
+        for (int i = 1; i < 11; i++) {
+            n_dinamico.add((int) Math.pow((double) i, 3.0));
+        }
+        n_dinamico.remove(0); // Remove o primeiro
+        n_dinamico.remove(n_dinamico.size() - 1); // Remove o último
+        n_dinamico.remove(n_dinamico.indexOf(27)); // Remove pelo valor
+        for (int item : n_dinamico) {
+            System.out.println("Item" + "[" + n_dinamico.indexOf(item) + "]:" + item);
+        }
+
     }
 }
