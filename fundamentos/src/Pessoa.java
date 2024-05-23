@@ -1,6 +1,6 @@
-package exemplos;
+package fundamentos.src;
 
-public class Pessoa {
+public class Pessoa { // Superclasse
     private String nome;
     private String email;
 

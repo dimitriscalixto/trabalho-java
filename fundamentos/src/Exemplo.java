@@ -1,4 +1,4 @@
-package exemplos;
+package fundamentos.src;
 
 import java.util.ArrayList;
 import java.util.List;
