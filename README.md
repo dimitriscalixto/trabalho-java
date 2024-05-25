@@ -101,3 +101,5 @@ A demonstração de uso das ferramentas e tecnologias abordadas na capacitação
     - Imprima na tela os elementos do array `numeros` em ordem decrescente.
       - _Não há apenas uma única forma de fazer isso. Pesquise sobre as soluções possíveis e escolha uma._
 
+
+2. [INDIVIDUAL] Criar a classe `UnidadeDao`, de forma semelhante à classe `EspecialideDao`. Criar os métodos `insert()`, `update()` e `delete()` para a classe `ProfissionalDao`. (Entrega: 28/04/2024)
