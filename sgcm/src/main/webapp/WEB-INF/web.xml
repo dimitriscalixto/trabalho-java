@@ -5,8 +5,9 @@
   xsi:schemaLocation="https://jakarta.ee/xml/ns/jakartaee https://jakarta.ee/xml/ns/jakartaee/web-app_6_0.xsd"
   version="6.0">
 
-  <display-name>Primeiro Servlet</display-name>
-  <description>Nosso primeiro servlet</description>
+  <display-name>SGCM</display-name>
+  <description>Sistema de Gerenciamento de Clínica Médica</description>
+
   <servlet>
     <servlet-name>PrimeiroServlet</servlet-name>
     <servlet-class>br.ufac.sgcm.PrimeiroServlet</servlet-class>

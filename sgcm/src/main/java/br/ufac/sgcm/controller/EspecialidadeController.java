@@ -63,4 +63,5 @@ public class EspecialidadeController implements IController<Especialidade> {
         registros = this.get();
         return registros;
     }
+
 }

@@ -1,0 +1,19 @@
+footer {
+    background-color: #80770f;
+}
+
+header {
+    background-image: linear-gradient(#80770f, #dcc40de3);
+}
+
+div#comandos {
+	border-bottom: 1px solid #80770f;
+}
+
+table th {
+    background-color: #80770f;
+}
+
+table tfoot td {
+    border-top: 1px solid #80770f;
+}
