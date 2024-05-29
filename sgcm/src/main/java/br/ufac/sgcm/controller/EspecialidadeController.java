@@ -1,10 +1,12 @@
 package br.ufac.sgcm.controller;
 
+import java.net.http.HttpRequest;
 import java.util.ArrayList;
 import java.util.List;
 
 import br.ufac.sgcm.dao.EspecialidadeDao;
 import br.ufac.sgcm.model.Especialidade;
+import jakarta.servlet.http.HttpServletRequest;
 
 public class EspecialidadeController implements IController<Especialidade> {
 
@@ -48,4 +50,17 @@ public class EspecialidadeController implements IController<Especialidade> {
         return registrosAfetados;
     }
 
+    // Metodos do Servlet
+    public List<Especialidade> processListRequest(HttpServletRequest req) {
+        List<Especialidade> registros = new ArrayList<>();
+        String paramExcluir = req.getParameter("vermelho");// excluir
+        if (paramExcluir != null) {
+            Especialidade esp = new Especialidade();
+            Long id = Long.parseLong(paramExcluir);
+            esp = this.get(id);
+            this.delete(esp);
+        }
+        registros = this.get();
+        return registros;
+    }
 }
