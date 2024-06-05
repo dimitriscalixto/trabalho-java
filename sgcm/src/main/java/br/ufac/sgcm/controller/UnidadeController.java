@@ -75,11 +75,11 @@ public class UnidadeController implements IController<Unidade> {
           item.setNome(req.getParameter("nome"));
           item.setEndereco(req.getParameter("endereco"));
           this.save(item);
-      }
-      try {
-          res.sendRedirect("unidades.jsp");
-      } catch (IOException e) {
-          e.printStackTrace();
+          try {
+            res.sendRedirect("unidades.jsp");
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
       }
       return item;
   }

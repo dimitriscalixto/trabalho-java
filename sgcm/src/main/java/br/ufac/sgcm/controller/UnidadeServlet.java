@@ -18,12 +18,7 @@ public class UnidadeServlet extends HttpServlet {
       res.setCharacterEncoding("UTF-8");
       String paramBusca = req.getParameter("busca");
       UnidadeController controller = new UnidadeController();
-      List<Unidade> unidades;
-      if(paramBusca != null && !paramBusca.isEmpty()){
-        unidades = controller.get(paramBusca);
-      } else{
-        unidades = controller.get();
-      }
+      List<Unidade> unidades = controller.get(paramBusca);
       ObjectMapper mapper = new ObjectMapper();
       try {
           PrintWriter saida = res.getWriter();
