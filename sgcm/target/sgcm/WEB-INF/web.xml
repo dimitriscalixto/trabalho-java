@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<web-app xmlns="https://jakarta.ee/xml/ns/jakartaee"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="https://jakarta.ee/xml/ns/jakartaee https://jakarta.ee/xml/ns/jakartaee/web-app_6_0.xsd"
+  version="6.0">
+
+  <display-name>SGCM</display-name>
+  <description>Sistema de Gerenciamento de Clínica Médica</description>
+
+  <servlet>
+    <servlet-name>PrimeiroServlet</servlet-name>
+    <servlet-class>br.ufac.sgcm.PrimeiroServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>PrimeiroServlet</servlet-name>
+    <url-pattern>/primeiroservlet</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <servlet-name>Especialidade</servlet-name>
+    <servlet-class>br.ufac.sgcm.controller.EspecialidadeServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>Especialidade</servlet-name>
+    <url-pattern>/especialidade</url-pattern>
+  </servlet-mapping>
+   <servlet>
+    <servlet-name>Unidade</servlet-name>
+    <servlet-class>br.ufac.sgcm.controller.UnidadeServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>Unidade</servlet-name>
+    <url-pattern>/unidade</url-pattern>
+  </servlet-mapping>
+</web-app>

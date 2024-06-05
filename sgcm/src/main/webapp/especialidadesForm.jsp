@@ -1,3 +1,15 @@
+<%@ page pageEncoding="UTF-8" %>
+<%@ page import="java.util.List" %>
+<%@ page import="java.util.Objects" %>
+<%@ page import="br.ufac.sgcm.model.Especialidade"%>
+
+<jsp:useBean id="controller" class="br.ufac.sgcm.controller.EspecialidadeController" scope="page"/> <!--Adicionei o scope-->
+<jsp:useBean id="item" class="br.ufac.sgcm.model.Especialidade" scope="page"/>
+
+<% 
+    item = controller.processFormRequest(request, response); 
+%> <!--Retirei o tipo Especialidade -->
+
 <!DOCTYPE html>
 <html>
     <head>
@@ -42,7 +54,11 @@
             <form method="post">
 
                 <div class="grid">
-
+                <input type="hidden" name="id" id="id"
+                value="<%=Objects.toString(item.getId(), "")%>"> <!--Adicionei o parâmetro "" no método toString()-->
+                <label>Nome</label>
+                <input type="text" name="nome" id="nome"
+                value="<%=Objects.toString(item.getNome(), "")%>">
                 </div>
 
                 <input type="button" value="Cancelar" data-url="especialidades.jsp">
@@ -52,7 +68,7 @@
         </main>
         <footer>
             <span>SGCM - Sistema de Gerenciamento de Clínica Médica</span>
-            <span>Suporte técnico: (68) 5555-5555 | <a href="mailto:suporte.sgcm@ufac.br">suporte.sgcm@ufac.br</a></span>
+            <span>Suporte técnico: (68) 3333-3333 | <a href="mailto:suporte.sgcm@ufac.br">suporte.sgcm@ufac.br</a></span>
         </footer>
     </body>
 </html>

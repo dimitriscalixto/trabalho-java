@@ -10,13 +10,14 @@ import java.util.List;
 import br.ufac.sgcm.model.Unidade;
 
 public class UnidadeDao implements IDao<Unidade> {
-
+    
     private Connection conexao;
     private PreparedStatement ps;
     private ResultSet rs;
+    
 
     public UnidadeDao() {
-        this.conexao = ConexaoDB.getConexao();
+        conexao = ConexaoDB.getConexao();
     }
 
     @Override

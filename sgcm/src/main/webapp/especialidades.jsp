@@ -1,3 +1,13 @@
+<%@ page pageEncoding="UTF-8" %>
+<%@ page import="java.util.List" %>
+<%@ page import="br.ufac.sgcm.model.Especialidade"%>
+
+<jsp:useBean id="controller" class="br.ufac.sgcm.controller.EspecialidadeController" scope="page"/> <!--Adicionei scope-->
+
+
+<% 
+    List<Especialidade> registros = controller.processListRequest(request);
+%>
 
 <!DOCTYPE html>
 <html>
@@ -17,7 +27,7 @@
             </div>
             <div id="usuarioInfo">
                 <span>Usuário: Administrador (admin)</span>
-                <span>Papel: ADMIN</span>
+                <span>Papel: AMIN</span>
                 <select id="tema">
                     <option value="">Escolha um tema</option>
                     <option value="azul">Azul</option>
@@ -60,11 +70,20 @@
                     </tr>
                 </thead>
                 <tbody>
-                    
+                    <% for (Especialidade item : registros){ %>
+                    <tr>
+                        <td class="fit"><%= item.getId() %></td>
+                        <td><%= item.getNome() %></td>
+                        <td>
+                            <a class="botao" href="especialidadesForm.jsp?id=<%= item.getId() %>">Editar</a>
+                            <a class="botao excluir" href="especialidades.jsp?excluir=<%= item.getId() %>">Excluir</a>
+                        </td>
+                    </tr>
+                    <% } %>
                 </tbody>
                 <tfoot>
                     <tr>
-                        <td colspan="3">Total de registros: </td>
+                        <td colspan="3">Total de registros: <%= registros.size()%></td>
                     </tr>
                 </tfoot>
             </table>

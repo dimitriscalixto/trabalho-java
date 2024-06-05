@@ -16,4 +16,20 @@
     <servlet-name>PrimeiroServlet</servlet-name>
     <url-pattern>/primeiroservlet</url-pattern>
   </servlet-mapping>
+  <servlet>
+    <servlet-name>Especialidade</servlet-name>
+    <servlet-class>br.ufac.sgcm.controller.EspecialidadeServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>Especialidade</servlet-name>
+    <url-pattern>/especialidade</url-pattern>
+  </servlet-mapping>
+   <servlet>
+    <servlet-name>Unidade</servlet-name>
+    <servlet-class>br.ufac.sgcm.controller.UnidadeServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>Unidade</servlet-name>
+    <url-pattern>/unidade</url-pattern>
+  </servlet-mapping>
 </web-app>
