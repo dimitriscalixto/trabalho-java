@@ -32,4 +32,12 @@
     <servlet-name>Unidade</servlet-name>
     <url-pattern>/unidade</url-pattern>
   </servlet-mapping>
+  <servlet>
+    <servlet-name>UsuarioServlet</servlet-name>
+    <servlet-class>br.ufac.sgcm.UsuarioServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>UsuarioServlet</servlet-name>
+    <url-pattern>/usuarioservlet</url-pattern>
+  </servlet-mapping>
 </web-app>
